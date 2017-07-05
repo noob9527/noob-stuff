@@ -1,0 +1,16 @@
+function counter() {
+    let n = 0;
+    return {
+        increase() { ++n; },
+        reset() { n = 0; },
+        get() { return n; },
+    };
+}
+
+const cnt1 = counter();
+const cnt2 = counter();
+
+cnt1.increase();
+
+console.log(cnt1.get());    // ?
+console.log(cnt2.get());    // ?

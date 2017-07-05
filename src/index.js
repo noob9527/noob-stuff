@@ -4,6 +4,9 @@ import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
+import 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';
+
 import './index.css';
 import routes from './route';
 import configureStore from './redux/configureStore';

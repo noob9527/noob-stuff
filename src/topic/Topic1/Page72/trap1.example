@@ -1,0 +1,16 @@
+function createFunction() {
+    let arr = [];
+
+    for (var i = 0; i < 5; i++) {
+        arr[i] = function () {
+            return i;
+        };
+    }
+
+    return arr;
+}
+
+const resultFn = createFunction();
+const result = resultFn.map(e => e());
+
+console.log(result);    // ?

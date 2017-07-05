@@ -145,6 +145,7 @@ module.exports = {
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
+          /\.example$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -161,6 +162,10 @@ module.exports = {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]',
         },
+      },
+      {
+        test: [/\.example$/],
+        loader: require.resolve('raw-loader'),
       },
       // Process JS with Babel.
       {
@@ -182,7 +187,7 @@ module.exports = {
       // "style" loader turns CSS into JS modules that inject <style> tags.
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
-      
+
       // without css modules
       {
         test: /\.css$/,

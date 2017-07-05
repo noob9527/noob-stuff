@@ -1,39 +1,53 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import CustomSlider from '../../share/CustomSlider/CustomSlider';
-import { customSliderActionCreator } from './Topic1Redux';
+import { Deck } from 'spectacle';
+import createTheme from 'spectacle/lib/themes/default';
 
-import Page1 from './Page1';
-import Page2 from './Page2';
-import Page3 from './Page3';
-import Page4 from './Page4';
-import Page5 from './Page5';
+import Page10 from './Page10';
+import Page20 from './Page20';
+import Page23 from './Page23';
+import Page26 from './Page26';
+import Page30 from './Page30';
+import Page40 from './Page40';
+import Page45 from './Page45';
+import Page50 from './Page50';
+import Page60 from './Page60';
+import Page65 from './Page65';
+import Page70 from './Page70';
+import Page72 from './Page72';
+import Page74 from './Page74';
+import Page80 from './Page80';
 
-@connect(
-    state => ({
-        customSliderReducer: state.topic1.customSliderReducer,
-    }),
-    dispatch => ({
-        customSliderActionCreator: bindActionCreators(customSliderActionCreator, dispatch),
-    }),
-)
-class Topic1 extends React.Component {
-    render() {
-        return (
-          <CustomSlider
-            {...this.props.customSliderReducer}
-            {...this.props.customSliderActionCreator}
-          >
-            <Page1 />
-            <Page2 />
-            <Page3 />
-            <Page4 />
-            <Page5 />
-          </CustomSlider>
-        );
-    }
-}
+const theme = createTheme({
+    primary: 'black',
+    secondary: 'wheat',
+}, {
+    primary: 'Helvetica',
+});
+
+const Topic1 = () => (
+  <Deck
+    transition={['fade']}
+    transitionDuration={500}
+    progress="none"
+    theme={theme}
+    controls={false}
+  >
+    {Page10()}
+    {Page20()}
+    {Page23()}
+    {Page26()}
+    {Page30()}
+    {Page40()}
+    {Page45()}
+    {Page50()}
+    {Page60()}
+    {Page65()}
+    {Page70()}
+    {Page72()}
+    {Page74()}
+    {Page80()}
+  </Deck>
+);
 
 export default Topic1;
