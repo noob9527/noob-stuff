@@ -6,7 +6,6 @@ function counter() {
         get() { return n; },
     };
 }
-
 const cnt1 = counter();
 const cnt2 = counter();
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import styles from './Nav.less';
+
 const Nav = () => (
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="/topic1">topic1</Link>
+  <nav className={styles.nav}>
+    <Link to="/topic1" className="nav-item">topic1</Link>
   </nav>
 );
 

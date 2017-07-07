@@ -1,0 +1,11 @@
+function add(x, y){
+    return x + y;
+}
+
+function add(x){
+    return function addx(y){
+        return x + y;
+    }
+}
+
+add(1)(2)   // => 3

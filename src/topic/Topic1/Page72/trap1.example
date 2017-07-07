@@ -10,7 +10,6 @@ function createFunction() {
     return arr;
 }
 
-const resultFn = createFunction();
-const result = resultFn.map(e => e());
+const result = createFunction().map(e => e());
 
 console.log(result);    // ?

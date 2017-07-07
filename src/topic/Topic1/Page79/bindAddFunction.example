@@ -1,0 +1,10 @@
+const addx = add.bind(null, 1);
+
+// in memory
+const addx = {
+    func: 'function addx(y){ return x + y; }',
+    scope: {
+        // ...
+        x: 1,
+    },
+}

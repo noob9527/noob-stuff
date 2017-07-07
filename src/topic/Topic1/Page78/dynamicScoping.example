@@ -1,0 +1,7 @@
+// dynamic scoping
+const addx = 'function addx(y){ return x + y; }';
+
+x = 2;
+addx(0);    // => 2
+x = 3;
+addx(0);    // => 3

@@ -1,0 +1,13 @@
+// lexical scoping
+const addx = {
+    func: 'function addx(y){ return x + y; }',
+    scope: {
+        // ...
+        x: 1,
+    },
+};
+
+x = 2;
+addx(0);    // => 1
+x = 3;
+addx(0);    // => 1

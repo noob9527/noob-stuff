@@ -13,12 +13,12 @@ const styles = {
 };
 
 export default () => (
-  <Slide bgColor="#eee8d5">
+  <Slide bgColor="#eee8d5" transition={['slide']}>
     <BlockQuote style={styles}>
       <Quote textColor="#b58900" textSize="1em">{quote1}</Quote>
       <Cite textAlign="right" textColor="#93a1a1">javascript权威指南</Cite>
     </BlockQuote>
-    <BlockQuote style={{ ...styles, marginTop: '80px' }}>
+    <BlockQuote style={{ ...styles, margin: '80px 20px 20px 20px' }}>
       <Quote textColor="#b58900" textSize="1em">{quote2}</Quote>
       <Cite textAlign="right" textColor="#93a1a1">javascript高级程序设计</Cite>
     </BlockQuote>

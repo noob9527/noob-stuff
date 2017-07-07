@@ -15,11 +15,18 @@ describe('JS Inheritance', () => {
         };
     }
 
-    let Child = function () {};
-    let childInstance;
+    let Child;
+
+    it('es5 inheritance', () => {
+
+    });
+
+    it('es6 inheritance', () => {
+
+    });
 
     afterEach(() => {
-        childInstance = new Child('foo');
+        let childInstance = new Child('foo');
 
         fail();
 
@@ -40,14 +47,6 @@ describe('JS Inheritance', () => {
 
         // reset
         Child = function () {};
-        childInstance = {};
     });
 
-    it('es5 inheritance', () => {
-
-    });
-
-    it('es6 inheritance', () => {
-
-    });
 });
