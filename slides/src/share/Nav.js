@@ -6,9 +6,8 @@ import styles from './Nav.less';
 const Nav = () => (
   <nav className={styles.nav}>
     <ul>
-      <li>
-        <Link to="/javascript" className="nav-item">javascript</Link>
-      </li>
+      <li><Link to="/javascript" className="nav-item">javascript</Link></li>
+      <li><Link to="/kotlin" className="nav-item">kotlin</Link></li>
     </ul>
   </nav>
 );
