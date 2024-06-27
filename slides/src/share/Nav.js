@@ -8,6 +8,7 @@ const Nav = () => (
     <ul>
       <li><Link to="/javascript" className="nav-item">javascript</Link></li>
       <li><Link to="/kotlin" className="nav-item">kotlin</Link></li>
+      <li><Link to="/RAG" className="nav-item">RAG</Link></li>
     </ul>
   </nav>
 );

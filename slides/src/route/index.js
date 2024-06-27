@@ -7,6 +7,7 @@ import Nav from '../share/Nav';
 
 import Javascript from '../topic/Javascript/Javascript';
 import Kotlin from '../topic/Kotlin/Kotlin';
+import RAG from '../topic/RAG/RAG';
 
 
 export default () => (
@@ -14,5 +15,6 @@ export default () => (
     <Route path="/" component={Nav} />
     <Route path="/javascript" component={Javascript} />
     <Route path="/kotlin" component={Kotlin} />
+    <Route path="/RAG" component={RAG} />
   </Router>
     );
