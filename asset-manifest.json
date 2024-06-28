@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.6d6bbc57.css",
   "main.css.map": "static/css/main.6d6bbc57.css.map",
-  "main.js": "static/js/main.b9a81ebe.js",
-  "main.js.map": "static/js/main.b9a81ebe.js.map",
+  "main.js": "static/js/main.e57a56e7.js",
+  "main.js.map": "static/js/main.e57a56e7.js.map",
   "static/media/angular.svg": "static/media/angular.48ae79d9.svg",
   "static/media/electron.svg": "static/media/electron.81f8a984.svg",
   "static/media/have-you-met-kotlin.jpg": "static/media/have-you-met-kotlin.b0add4a4.jpg",
@@ -15,6 +15,7 @@
   "static/media/node.svg": "static/media/node.94cafb0d.svg",
   "static/media/react.svg": "static/media/react.4009eef3.svg",
   "static/media/the-good-parts.jpeg": "static/media/the-good-parts.5e6bc269.jpeg",
+  "static/media/traditional-rag-workflow.png": "static/media/traditional-rag-workflow.c1b520e4.png",
   "static/media/vue.svg": "static/media/vue.60dfaadb.svg",
   "static/media/weex.svg": "static/media/weex.c233ee9a.svg"
 }
