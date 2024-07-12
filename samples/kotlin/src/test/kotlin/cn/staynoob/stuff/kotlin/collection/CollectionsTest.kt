@@ -1,7 +1,7 @@
 package cn.staynoob.stuff.kotlin.collection
 
-import cn.staynoob.stuff.java.generic.Console
 import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Fail.fail
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -30,6 +30,7 @@ internal class CollectionsTest {
     }
 
     private fun mapIndexed(employees: List<Employee>): List<Employee> {
+        fail("Not yet implemented")
         return emptyList()
     }
 
@@ -37,31 +38,21 @@ internal class CollectionsTest {
     @DisplayName("mapIndexed")
     fun test100() {
         val res = mapIndexed(this.employees)
+        assertThat(res).hasSameSizeAs(this.employees)
         assertThat(res).allMatch { e -> e.displayOrder > 0 }
     }
 
-    private fun mapValues(dep_emp_map: Map<String, List<Employee>>): Map<String, Int> {
-        return emptyMap()
-    }
-
-    @Test
-    @DisplayName("mapValues")
-    fun test200() {
-        val expected = HashMap<String, Int>()
-        expected["IT"] = 2000
-        expected["HR"] = 4000
-
-        val res = mapValues(
-            this.employees.groupBy { it.department }
-        )
-
-        assertThat(res).isEqualTo(expected)
-    }
-
+    /**
+     * should return mapOf(`department` to `max salary`)
+     */
     private fun groupBy(employees: List<Employee>): Map<String, Int> {
+        fail("Not yet implemented")
         return emptyMap()
     }
 
+    /**
+     * expect mapOf(`department` to `max salary`)
+     */
     @Test
     @DisplayName("groupBy")
     fun test300() {

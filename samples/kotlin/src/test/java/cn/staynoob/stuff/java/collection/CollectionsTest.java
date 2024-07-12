@@ -8,8 +8,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static java.util.stream.Collectors.groupingBy;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Fail.fail;
 
 class CollectionsTest {
 
@@ -73,32 +73,20 @@ class CollectionsTest {
     }
 
     private static List<Employee> mapIndexed(List<Employee> employees) {
+        fail("Not yet implemented");
         return Collections.emptyList();
-    }
-
-    private static List<Employee> mapIndexedForLoop(List<Employee> employees) {
-        int count = 0;
-        for (Employee employee : employees) {
-            employee.setIndex(++count);
-        }
-        return employees;
-    }
-
-    private static List<Employee> mapIndexedSlowly(List<Employee> employees) {
-        IntStream.range(0, employees.size())
-                .forEach(e -> employees.get(e).setIndex(e));
-        return employees;
     }
 
     @Test
     @DisplayName("mapIndexed")
     void test100() {
         List<Employee> res = mapIndexed(this.employees);
+        assertThat(res).hasSameSizeAs(this.employees);
         assertThat(res).allMatch(e -> e.index > 0);
     }
 
     @Test
-    @DisplayName("mapIndexed performance")
+    @DisplayName("mapIndexed performance issue")
     void test110() {
         List<Employee> list = IntStream.range(0, 5000)
                 .mapToObj(e -> new Employee(String.valueOf(e), "", e))
@@ -116,31 +104,17 @@ class CollectionsTest {
         System.out.println("cost time: " + (System.currentTimeMillis() - start));
     }
 
-    private static Map<String, Integer> mapValues(Map<String, List<Employee>> dep_emp_map) {
-        return Collections.emptyMap();
-    }
-
-    @Test
-    @DisplayName("mapValues")
-    void test200() {
-        Map<String, Integer> expected = new HashMap<>();
-        expected.put("IT", 2000);
-        expected.put("HR", 4000);
-
-        Map<String, Integer> res = mapValues(
-                this.employees.stream().collect(groupingBy(Employee::getDepartment))
-        );
-
-        assertThat(res).isEqualTo(expected);
-    }
-
+    /**
+     * should return `department` to `max salary`
+     */
     private static Map<String, Integer> groupBy(List<Employee> employees) {
-//        Map<String, Employee> map  = employees.stream()
-//                .collect(groupingBy(Employee::getDepartment));
-
+        fail("Not yet implemented");
         return Collections.emptyMap();
     }
 
+    /**
+     * expect mapOf(`department` to `max salary`)
+     */
     @Test
     @DisplayName("groupBy")
     void test300() {
@@ -153,5 +127,18 @@ class CollectionsTest {
         assertThat(res).isEqualTo(expected);
     }
 
+    private static List<Employee> mapIndexedForLoop(List<Employee> employees) {
+        int count = 0;
+        for (Employee employee : employees) {
+            employee.setIndex(++count);
+        }
+        return employees;
+    }
+
+    private static List<Employee> mapIndexedSlowly(List<Employee> employees) {
+        IntStream.range(0, employees.size())
+                .forEach(e -> employees.get(e).setIndex(e));
+        return employees;
+    }
 
 }

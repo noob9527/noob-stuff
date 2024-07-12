@@ -20,13 +20,13 @@ class UserTest {
     }
 
     void greeting(User user) {
-        Boolean isJohnSnow = isJohnSnow(user);
-        if (isJohnSnow != null && isJohnSnow) {
-            sendMessage(user, "You know nothing!");
-        }
-//        if (isJohnSnow(user)) {
+//        Boolean isJohnSnow = isJohnSnow(user);
+//        if (isJohnSnow != null && isJohnSnow) {
 //            sendMessage(user, "You know nothing!");
 //        }
+        if (isJohnSnow(user)) {
+            sendMessage(user, "You know nothing!");
+        }
     }
 
     @Test

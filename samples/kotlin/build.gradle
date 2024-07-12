@@ -1,7 +1,7 @@
 buildscript {
     ext.repos = {
         mavenLocal()
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
         jcenter()
         mavenCentral()
     }
