@@ -19,7 +19,7 @@ const Presentation = () => (
             {/*        <Heading>数学和编程</Heading>*/}
             {/*    </FlexBox>*/}
             {/*</Slide>*/}
-            {/*<Syllabus/>*/}
+            <Syllabus/>
             {/*<Topic1/>*/}
             {/*<Topic2/>*/}
             <Topic3/>

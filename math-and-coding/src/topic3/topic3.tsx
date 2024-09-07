@@ -13,12 +13,6 @@ import {
     TableRow, FlexBox, Stepper, Markdown, Text, Box, Notes, Quote
 } from "spectacle";
 import {MathJax} from "better-react-mathjax";
-// // @ts-ignore
-// import scale1 from './scale-step1.excalidraw.png';
-// // @ts-ignore
-// import scale2 from './scale-step2.excalidraw.png';
-// // @ts-ignore
-// import scale3 from './scale-step3.excalidraw.png';
 
 // @ts-ignore
 import scale1 from './scale-step1.png';
@@ -35,6 +29,20 @@ import mousePoisonPuzzleAnswer1 from './mouse-poison-puzzle-answer1.png';
 import mousePoisonPuzzleAnswer2 from './mouse-poison-puzzle-answer2.png';
 // @ts-ignore
 import mousePoisonPuzzleAnswer3 from './mouse-poison-puzzle-answer3.png';
+
+// @ts-ignore
+import jobSubject0 from './job-subject-0.png';
+// @ts-ignore
+import jobSubject1 from './job-subject-1.png';
+// @ts-ignore
+import jobSubject2 from './job-subject-2.png';
+// @ts-ignore
+import jobSubject3 from './job-subject-3.png';
+
+// @ts-ignore
+import resume from './resume.png';
+// @ts-ignore
+import shannon from './shannon.jpg';
 
 function getRandomIntInclusive(min: number, max: number): number {
     const minCeiled = Math.ceil(min);
@@ -57,6 +65,9 @@ export const Topic3 = () => {
                 <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
                     <Image src={scale1} width={'80%'} height={'auto'}></Image>
                 </FlexBox>
+                <Notes>
+                    有一个天平和九个小球，其中一个比其他重，最少需要用天平称几次才能找到这个较重的小球？
+                </Notes>
             </Slide>
             <Slide>
                 <FlexBox height={'100%'}
@@ -88,13 +99,13 @@ export const Topic3 = () => {
                 </Appear>
                 <Notes>
                     <Text>
-                        我只能回答是与否
-                    </Text>
-                    <Text>
-                        数字是 {randomNumber}
+                        我只能回答是与否，怎样猜最合理？
                     </Text>
                     <Text>
                         二分查找
+                    </Text>
+                    <Text>
+                        数字是 {randomNumber}
                     </Text>
                 </Notes>
             </Slide>
@@ -130,7 +141,7 @@ export const Topic3 = () => {
                     }}>
                         <FlexBox flexDirection={'column'}>
                             <Heading>信息熵</Heading>
-                            <Text>（大学）</Text>
+                            <Text>（信息论）</Text>
                             <MathJax style={{fontSize: '32px'}}>{'$$H=-\\sum P_i\\log P_i$$'}</MathJax>
                         </FlexBox>
                     </Appear>
@@ -168,7 +179,7 @@ export const Topic3 = () => {
                     </FlexBox>
                     <Box>
                         <Appear>
-                            <MathJax style={{fontSize: '32px'}}>每问一次，不确定性最多能减少 1 bit$</MathJax>
+                            <MathJax style={{fontSize: '32px'}}>每问一次，不确定性最多能减少 1 bit</MathJax>
                             <MathJax style={{fontSize: '32px'}}>
                                 {`理论上需要问 = $\\frac{H_x}{H_y} = \\frac{5}{1} = 5$ 次`}
                             </MathJax>
@@ -210,20 +221,8 @@ export const Topic3 = () => {
                             <MathJax style={{fontSize: '32px'}}>
                                 {`理论最少称重次数 = $\\frac{H_x}{H_y} = \\frac{\\log_2 9}{\\log_2 3} = \\log_3 9 = 2$ 次`}
                             </MathJax>
-                            {/*<MathJax style={{fontSize: '32px'}}>*/}
-                            {/*    {`对数幂性质 $H_x = log_2 9 \\quad H_y = log_2 3$`}*/}
-                            {/*</MathJax>*/}
-                            {/*<MathJax style={{fontSize: '32px'}}>*/}
-                            {/*    {`对数基底转换 $\\frac{H_x}{H_y} = \\frac{log_2 9}{log_2 3} = log_3 9 = 2$`}*/}
-                            {/*</MathJax>*/}
                         </Appear>
                     </Box>
-                    {/*                    <Markdown>*/}
-                    {/*                        {`*/}
-                    {/*- 对数幂性质 $H_x = log_2 9 \\quad H_y = log_2 3$                        */}
-                    {/*- 对数基底转换 $\\frac{H_x}{H_y} = \\frac{log_2 9}{log_2 3} = log_3 9 = 2$                    */}
-                    {/*                        `}*/}
-                    {/*                    </Markdown>*/}
                 </FlexBox>
                 <Notes>
                     <MathJax>$\log_3 9 = 2$</MathJax>
@@ -235,6 +234,15 @@ export const Topic3 = () => {
                         `}
                     </Markdown>
                 </Notes>
+            </Slide>
+            <Slide>
+                <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
+                    <Image src={shannon} height={'80%'}></Image>
+                    <Box>
+                        <Heading fontSize={'48px'}>《通信的数学原理》</Heading>
+                        <Text fontSize={'32px'} textAlign={'right'}>——  克劳德 香农</Text>
+                    </Box>
+                </FlexBox>
             </Slide>
             <Slide>
                 <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
@@ -319,43 +327,38 @@ export const Topic3 = () => {
                     <Image src={mousePoisonPuzzleAnswer3} width={'auto'} height={'80%'}></Image>
                 </FlexBox>
             </Slide>
-            {/*<SlideLayout.TwoColumn*/}
-            {/*    left={*/}
-            {/*        <>*/}
-            {/*            <Heading>指数</Heading>*/}
-            {/*            <MathJax style={{fontSize: '32px'}}>$$y=2^x$$</MathJax>*/}
-            {/*        </>*/}
-            {/*    }*/}
-            {/*    right={*/}
-            {/*        <>*/}
-            {/*            <Heading>对数</Heading>*/}
-            {/*            <MathJax style={{fontSize: '32px'}}>{'$$x=log(y)$$'}</MathJax>*/}
-            {/*        </>*/}
-            {/*    }*/}
-            {/*/>*/}
-            {/*<Slide>*/}
-            {/*    <Heading>对数函数</Heading>*/}
-            {/*    <MathJax style={{fontSize: '32px'}}>$$y=cos(\Theta)$$</MathJax>*/}
-            {/*    <Appear>*/}
-            {/*        <Table>*/}
-            {/*            <TableHeader>*/}
-            {/*                <TableRow>*/}
-            {/*                    <TableCell></TableCell>*/}
-            {/*                    <TableCell>$0\deg$</TableCell>*/}
-            {/*                    <TableCell>$90\deg$</TableCell>*/}
-            {/*                    <TableCell>$180\deg$</TableCell>*/}
-            {/*                </TableRow>*/}
-            {/*            </TableHeader>*/}
-            {/*            <TableBody></TableBody>*/}
-            {/*        </Table>*/}
-            {/*    </Appear>*/}
-            {/*</Slide>*/}
-            {/*<Slide>*/}
-            {/*    <Heading>余弦定理</Heading>*/}
-            {/*</Slide>*/}
-            {/*<Slide>*/}
-            {/*    <Heading>文本相似性</Heading>*/}
-            {/*</Slide>*/}
+            <Slide>
+                <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
+                    <Image src={jobSubject0} width={'auto'} height={'80%'}></Image>
+                </FlexBox>
+                <Notes>
+                    <Text>猜一个陌生人的职业</Text>
+                    <Text>需要一些依据来降低不确定性</Text>
+                </Notes>
+            </Slide>
+            <Slide>
+                <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
+                    <Image src={jobSubject1} width={'auto'} height={'80%'}></Image>
+                </FlexBox>
+            </Slide>
+            <Slide>
+                <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
+                    <Image src={jobSubject2} width={'auto'} height={'80%'}></Image>
+                </FlexBox>
+            </Slide>
+            <Slide>
+                <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
+                    <Image src={jobSubject3} width={'auto'} height={'80%'}></Image>
+                </FlexBox>
+                <Notes>
+                    <Text>目前，程序员依然高度依赖英语阅读能力</Text>
+                </Notes>
+            </Slide>
+            <Slide>
+                <FlexBox height={'100%'} alignItems={'center'} justifyContent={'center'}>
+                    <Image src={resume} width={'auto'} height={'80%'}></Image>
+                </FlexBox>
+            </Slide>
         </>
     )
 }
