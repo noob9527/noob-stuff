@@ -20,7 +20,7 @@ const Presentation = () => (
             {/*    </FlexBox>*/}
             {/*</Slide>*/}
             <Syllabus/>
-            {/*<Topic1/>*/}
+            <Topic1/>
             {/*<Topic2/>*/}
             <Topic3/>
             {/*<Slide>*/}
