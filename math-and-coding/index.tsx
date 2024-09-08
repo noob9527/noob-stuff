@@ -21,7 +21,7 @@ const Presentation = () => (
             {/*</Slide>*/}
             <Syllabus/>
             <Topic1/>
-            {/*<Topic2/>*/}
+            <Topic2/>
             <Topic3/>
             {/*<Slide>*/}
             {/*    <FlexBox height="100%">*/}
