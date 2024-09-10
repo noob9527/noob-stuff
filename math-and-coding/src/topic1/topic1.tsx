@@ -11,6 +11,8 @@ import linearRegression0 from './linear-regression0.png';
 import linearRegression1 from './linear-regression1.png';
 // @ts-ignore
 import gradientDescent from './gradient-descent.png';
+// @ts-ignore
+import gradientDescent2 from './gradient-descent2.png';
 
 export const Topic1 = () => {
 
@@ -124,6 +126,12 @@ Solve this 2x2 linear equations, we can get the best line or the worst line, we 
             `}
           </MathJax>
         </Notes>
+      </Slide>
+      <Slide>
+        <FlexBox flexDirection={'column'} height={'100%'}>
+          {/*<Heading fontSize={'32px'}>梯度下降</Heading>*/}
+          <Image src={gradientDescent2} height={'80%'}></Image>
+        </FlexBox>
       </Slide>
       {/*<Slide>*/}
       {/*  <FlexBox*/}
